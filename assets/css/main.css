@@ -19,37 +19,37 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #1c1c1e; /* Dark background color for the entire website */
+  --default-color: #d1d1d6; /* Lighter text color for readability */
+  --heading-color: #e5e5e7; /* Light heading color to contrast with dark backgrounds */
+  --accent-color: #bb86fc; /* Muted purple accent color for buttons and links */
+  --surface-color: #2c2c2e; /* Darker surface color for cards and boxed elements */
+  --contrast-color: #f5f5f5; /* Contrast color for readability, used on accent elements */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #d1d1d6;  /* Light color for navigation links */
+  --nav-hover-color: #bb86fc; /* Accent color for hovered nav items */
+  --nav-mobile-background-color: #1c1c1e; /* Dark background for mobile menu */
+  --nav-dropdown-background-color: #2c2c2e; /* Dark dropdown background color */
+  --nav-dropdown-color: #d1d1d6; /* Light color for dropdown links */
+  --nav-dropdown-hover-color: #bb86fc; /* Accent color for hovered dropdown links */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Color Presets */
 
 .light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
+  --background-color: #2c2c2e;
+  --surface-color: #3a3a3c;
 }
 
 .dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+  --background-color: #121212; /* Deep dark background */
+  --default-color: #e5e5e7; /* Light text color for visibility */
+  --heading-color: #f5f5f7; /* Brighter heading color */
+  --surface-color: #1c1c1e; /* Dark surface color for boxes and cards */
+  --contrast-color: #ffffff; /* High contrast white for text on dark backgrounds */
 }
 
 /* Smooth scroll */
@@ -85,58 +85,6 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
-}
-
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -523,6 +471,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white; /* Add this line */
 }
 
 .hero img {
@@ -537,10 +486,11 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
+  color: white; /* Add this line */
+
 }
 
 .hero .container {
@@ -552,6 +502,8 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: white; /* Add this line */
+
 }
 
 .hero p {
@@ -566,6 +518,8 @@ section,
 
 .hero .social-links {
   margin-top: 25px;
+  color: white; /* Add this line */
+
 }
 
 .hero .social-links a {
@@ -575,6 +529,8 @@ section,
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
+  color: white; /* Add this line */
+
 }
 
 .hero .social-links a:hover {
@@ -591,36 +547,6 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: var(--accent-color);
-  line-height: 0;
-}
- 
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -641,6 +567,7 @@ section,
   background: color-mix(in srgb, var(--background-color), transparent 10%);
   padding: 15px;
 }
+
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
