@@ -228,15 +228,16 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+.footer { 
   
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 10%);
+  ;
   font-size: 14px;
   text-align: center;
   padding: 5px 0;
   position: relative;
-}
+}   
 
 .footer h3 {
   font-size: 36px;
